@@ -6,19 +6,19 @@ Path:
 
 ``/information/[_methodName_]``
 
-Provide different information.
+Provides information such as schedules, trains, orders, availability and reports.
 
 .. _getSchedule:
 getSchedule
 ----
 Method: GET
 
-Information about available trains for passed route and date
+Provides information about the available trains for a selected route and date.
 
 Parameters:
 
-* st1 - Id of station of departure;
-* st2 - Id of station of arrival;
+* st1 - Id of station of departure
+* st2 - Id of station of arrival
 * dt - date in format `dd.mm.YYYY`
 
 Example of request:
@@ -32,14 +32,14 @@ getTrain
 ----
 Method: GET
 
-Information about available places on requested train
+Provides information about the available places on a requested train.
 
 Parameters:
 
-* st1 - Id of station of departure;
-* st2 - Id of station of arrival;
+* st1 - Id of station of departure
+* st2 - Id of station of arrival
 * dt - date in format `dd.mm.YYYY`
-* train - train number. At the moment with cyrillic litter in the end.
+* train - train number. At the moment with cyrillic litter in the end
 
 Example of request:
 
@@ -52,11 +52,11 @@ getOrder
 ----
 Method: GET
 
-Information about permanent order. Here you can find information about tickets ant their statuses.
+Provides information about the tickets and statuses of a permanent order. 
 
 Parameters:
 
-* id - Reference number of order.
+* id - Reference number of order
 
 Example of request:
 
@@ -69,18 +69,20 @@ getReport
 ----
 Method: GET
 
-Report for operation during selected period. It include:
+Provides a report on operations during a selected period; which includes:
 
-* tickets booking;
-* tickets cancellation;
-* money operations (funds to you deposit).
+* Ticket booking
+* Ticket cancellation
+* Funds which have been deposited
 
 Parameters:
 
 * dt1 - First time bound
 * dt2 - Second time bound
 
-Parameters should be in format `dd.mm.YYYY`. Dates interprets as GMT+0. Time of first bound = 00:00, and the second = 23:59
+Parameters should be in format `dd.mm.YYYY`
+Dates interprets as GMT+0
+Time of first bound = 00:00, and the second = 23:59
 
 Example of request:
 
